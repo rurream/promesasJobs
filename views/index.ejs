@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Iconos -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+     <!-- BOOTSTRAP 4.4.1 -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/styleLogIn.css' />
+</head>
+
+<body>
+
+    <%- include('navBar') %>
+
+
+    <br>
+    <h2 class="bienvenida central"><%= message %></h2>
+    <br>
+
+    <section id="formLogIn">
+        <div class="ui middle aligned center aligned grid acortar central">
+            <div class=" cuerpoLogIn">
+                <div class="containTitle">
+                    <h2 class="ui teal image header">Ingresa tus credenciales</h2>
+                </div>
+                
+                <form class="ui large form" id="login">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="fas fa-user-tie"></i>
+                                <input type="text" name="email" placeholder="E-mail address" id="log-mail">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="fas fa-key"></i>
+                                <input type="password" name="password" placeholder="Password" id="log-pass">
+                            </div>
+                        </div>
+                        <div class="containButton">
+                            <button class="btn btn-info" type="submit">Login</button>
+                        </div>
+                        
+                    </div>        
+                </form>
+                
+                <!-- <div class="ui error message" id="login-error"></div> -->
+            </div>
+           
+        </div>
+    </section>
+
+    <div class="modal" id="modal"><!-- Place at bottom of page --></div>
+    <!-- jQuery minificado pero completo para Bootstrap y para uso general -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- popper @1.16.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- bootstrapcdn 4.4.1 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+       
+    <script type="module" src="/actions/login.js"></script>
+    <script type="module" src="/actions/navBar.js"></script>
+</body>
+
+</html>

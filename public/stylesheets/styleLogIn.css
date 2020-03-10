@@ -1,0 +1,38 @@
+.cuerpoLogIn{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(224, 219, 219);
+    border-radius: 5px;
+    padding:1rem;
+    /* display: flex; */
+}
+.cuerpoLogIn .containTitle{
+    display: inline-flex;
+    flex-direction:  row;
+    justify-content: center;
+    width:100%;
+}
+.cuerpoLogIn .containTitle h2{
+    color: deepskyblue;
+}
+#login .segment .field{
+    border: 1px solid rgb(224, 219, 219);
+    border-radius: 5px;
+    padding:0.5rem;
+    margin: 1rem;
+}
+i{
+    width: 1rem;
+}
+#login .segment .field input{
+    border: none;
+}
+#login .segment .containButton{
+    margin: 1rem;
+}
+#login .segment .containButton button{
+    width: 100%;
+    border-radius:5px;
+    font-weight: bold;
+}

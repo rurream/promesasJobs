@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+     <!-- BOOTSTRAP 4.4.1 -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+     <link rel='stylesheet' href='/stylesheets/styleJobs.css' />
+ 
+  </head>
+  <body >
+    
+    <%- include('navBar') %>
+
+    <br>
+     <!-- DIseña acá tu vista -->
+     <header>
+       <div class="central titulo">
+       
+        <h1>Busqueda de empleos (jobs)</h1>
+       </div>
+     </header>
+    <br>
+
+
+    <div id="trabajos" class="trabajos central">
+
+      <form action="" id="formBuscaJobs">
+        <div class="row ">
+          
+          <div class="contOp xs-12 col-md-4">
+            <div>
+              <div class="contChbx">
+                <label><input type="checkbox" name="opcionBusqueda" value="" id="clave">Palabra clave</label>
+              </div>
+              <div class="contFiltro">
+                <input type="text" id="filtroClave" class="filtroClave">
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="contOp xs-12 col-md-4">
+            <div>
+              <div class="contChbx">
+                <label><input type="checkbox" name="opcionBusqueda" value="" id="localidad">Filtrar localidad</label>
+              </div>
+              <div class="contFiltro">
+                <input type="text" id="filtroLocalidad" class="filtroLocalidad">
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="contOp xs-12 col-md-2">
+            <div>
+              <div class="contChbx">
+                <label><input type="checkbox" name="opcionBusqueda" value="" id="jornada">Tipo Jornada</label>
+              </div>
+              <div class="contFiltro">
+                <select name="tipoJornada" id="filtroTipoJornada" class="filtroTipoJornada">
+                  <option value="">...</option>
+                  <option value="completo">Completa</option>
+                  <option value="medio">Parcial</option>
+                </select>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="contOp xs-12 col-md-2">
+            <div class="btForm">
+              <button type="submit" id="buscarJobs" class="btn badge-info">Buscar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+
+      <div class="containerTabla" id="containerTabla">
+        <table id="tablaListaJobs" class="tablaRegistrados">
+          <thead>
+            <!-- <tr><th>Título</th><th>Compañía</th><th>Localidad</th></tr> -->
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <br><br><br>
+    <div class="modal" id="modal"><!-- Place at bottom of page --></div>
+    <!-- jQuery minificado pero completo para Bootstrap y para uso general -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- popper @1.16.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- bootstrapcdn 4.4.1 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+
+        <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+        <script type="module" src="/actions/navBar.js"></script>
+    <script type="module" src="/actions/jobs.js"></script>
+    
+  </body>
+</html>
